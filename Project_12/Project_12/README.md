@@ -10,4 +10,4 @@
 
 ---
 
-[music](https://app.netlify.com/sites/amazing-dusk-909f25/overview)
+[music](https://amazing-dusk-909f25.netlify.app/)
