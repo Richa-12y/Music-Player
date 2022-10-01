@@ -1,0 +1,102 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="music-container">
+      <div id="info" class="info">
+        <span class="artist">Vilen</span>
+        <span class="name">Chidiya</span>
+        <div class="progress-bar">
+          <div class="bar">
+            <progress id="file" max="100" value="0">70%</progress>
+          </div>
+        </div>
+      </div>
+      <div id="control-panel" class="control-panel">
+        <div class="album-art">
+          <img
+            id="background-img"
+            src="https://www.lyricsbell.com/wp-content/uploads/2019/10/chidiya-vilen.jpg"
+            alt="nf"
+          />
+        </div>
+        <div class="controls">
+          <button class="previous" value="0">
+            <i
+              class="fa-solid fa fa-backward"
+              style="
+                color: rgba(50, 50, 93, 0.25);
+                background-color: rgba(50, 50, 93, 0.25);
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1em;
+              "
+            ></i>
+          </button>
+          <button id="play" class="play" value="0">
+            <i
+              class="fa-solid fa fa-play"
+              style="
+                color: rgba(50, 50, 93, 0.25);
+                background-color: rgba(50, 50, 93, 0.25);
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1em;
+              "
+            ></i>
+          </button>
+          <button class="pause">
+            <i
+              class="fa-solid fa fa-pause"
+              style="
+                color: rgba(50, 50, 93, 0.25);
+                background-color: rgba(50, 50, 93, 0.25);
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1em;
+              "
+            ></i>
+          </button>
+          <button class="next">
+            <i
+              class="fa-solid fa fa-forward"
+              style="
+                color: rgba(50, 50, 93, 0.25);
+                background-color: rgba(50, 50, 93, 0.25);
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1em;
+              "
+            ></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

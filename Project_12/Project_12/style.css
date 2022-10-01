@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+
+*{
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+
+.music-container{
+    position: relative;
+    background-color: aliceblue;
+    width:300px;
+    height: 100px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 40%;
+   transform:rotate(20deg);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 
+   inset 0 0 50px #fff,
+   inset 20px 0 80px #f0f,
+   inset -20px 0 80px #0ff,
+   inset  20px 0 300px #f0f,
+   inset -20px 0 300px #0ff;
+     animation: glowing 1s infinite;
+
+}
+@keyframes glowing{
+    0%{
+        box-shadow:
+                inset 0 0 50px #fff,
+                inset 20px 0 80px #f0f,
+                inset -20px 0 80px #0ff,
+                inset 20px 0 300px #f0f,
+                inset -20px 0 300px #0ff;
+                
+    }
+        25% {
+            box-shadow:
+                inset 0 0 50px #fff,
+                inset 20px 0 80px rgb(169, 164, 169),
+                inset -20px 0 80px rgb(114, 149, 149),
+                inset 20px 0 300px rgb(169, 164, 169),
+                inset -20px 0 300px rgb(114, 149, 149);
+              
+        }
+        50% {
+             box-shadow:
+                 inset 0 0 50px #fff,
+                 inset 20px 0 80px rgb(250, 164, 94),
+                 inset -20px 0 80px rgb(163, 238, 165),
+                 inset 20px 0 300px rgb(250, 164, 94),
+                 inset -20px 0 300px rgb(163, 238, 165);
+                 
+         }
+                 75% {
+                     box-shadow:
+                         inset 0 0 50px #fff,
+                         inset 20px 0 80px rgb(245, 240, 113),
+                         inset -20px 0 80px rgb(250, 164, 94),
+                         inset 20px 0 300px rgb(245, 240, 113),
+                         inset -20px 0 300px rgb(250, 164, 94);
+                        
+                 }
+                 100% {
+                     box-shadow:
+                         inset 0 0 50px #fff,
+                         inset 20px 0 80px rgb(163, 238, 165),
+                         inset -20px 0 80px rgb(250, 164, 94),
+                         inset 20px 0 300px rgb(163, 238, 165),
+                         inset -20px 0 300px rgb(250, 164, 94);
+                      
+                 }
+}
+.info{
+    position: absolute;
+    height: 100px;
+    opacity: 1;
+    /* background-color:white; */
+    padding: 5px 15px 5px 110px;
+    border-radius: 15px;
+    width: 100%;
+border-radius: 40%;
+transition:500ms ease-in;
+z-index: -2;
+display: flex;
+flex-direction: column;
+color: transparent;
+box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px #f0f,
+        inset -20px 0 80px #0ff,
+        inset 20px 0 300px #f0f,
+        inset -20px 0 300px #0ff;
+      
+    animation: glowing 1s infinite;
+}
+.music-container:hover .info{
+       height: 100px;
+        top: -90%;
+        width: 250px;
+        opacity: 1;
+        left: 10px;
+        right: 10px;
+        background-color: aliceblue;
+        padding: 5px 15px 5px 110px;
+        border-radius: 15px; 
+        z-index: -1;
+        color: black;
+        font-size: 0.7em;
+        font-weight: 700;
+       
+}
+
+.progress-bar{
+    display: none;
+   
+}
+.music-container:hover .progress-bar {
+   display: inline;
+    transition: 1s ease-in-out;
+}
+
+
+.bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+}
+  
+[ alt="nf"]{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30%;
+    left: 0%;
+    animation: mymove 5s infinite;
+    box-shadow: rgba(17, 15, 15, 0.4) -5px 5px, rgba(96, 95, 95, 0.3) -10px 10px, rgba(102, 100, 102, 0.2) -15px 15px, rgba(251, 248, 250, 0.1) -20px 20px, rgba(147, 145, 146, 0.05) -25px 25px;
+}
+
+
+@keyframes mymove {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.controls{
+    display: flex;
+    flex-wrap:nowrap;
+    /* flex-direction: row; */
+    width: 180px;
+    position: absolute;
+    top: 35%;
+    left: 33%;
+    justify-content: center;
+    align-items: center; 
+    /* background-color: aqua; */
+  }
+.fa-solid:hover{
+    background-color: black !important;
+    color:white !important;
+
+}
+button{
+    outline: none;
+    border: none;
+    /* display: flex;
+    flex-wrap: wrap; */
+    width: 80%;
+    background-color: transparent;
+}
+progress {
+     width: 100%;
+    height: 3px;
+   background-color: rgba(50, 50, 93, 0.25);
+    border-radius: 10px;
+  
+}
+
+progress {
+    color: lightblue;
+}
+
+progress::-moz-progress-bar {
+    background: lightcolor;
+}
+
+progress::-webkit-progress-value {
+    background: black;
+}
+
+progress::-webkit-progress-bar {
+            background-color:rgba(50, 50, 93, 0.25);
+}
